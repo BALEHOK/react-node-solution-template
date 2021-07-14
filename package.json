@@ -1,0 +1,29 @@
+{
+  "name": "abtest",
+  "version": "0.0.1",
+  "description": "Powers A/B tests at Amazon Marketplace",
+  "private": true,
+  "scripts": {
+    "start:ui": "yarn workspace web-ui start",
+    "start:server": "yarn workspace web-server start",
+    "script": "yarn workspace web-server script",
+    "lint": "run-s lint:*",
+    "lint:ui": "yarn workspace web-ui lint",
+    "lint:server": "yarn workspace web-server lint",
+    "lint-fix": "run-s lint-fix:*",
+    "lint-fix:ui": "yarn workspace web-ui lint --fix",
+    "lint-fix:server": "yarn workspace web-server lint --fix",
+    "test:ui": "yarn workspace web-ui test",
+    "test:server": "yarn workspace web-server test",
+    "test": "run-s test-cov:*",
+    "test-cov:ui": "yarn workspace web-ui test-cov",
+    "test-cov:server": "yarn workspace web-server test-cov",
+    "build": "run-s build:*",
+    "build:ui": "yarn workspace web-ui build",
+    "build:server": "yarn workspace web-server build"
+  },
+  "author": "Aleksandr Shukletsov",
+  "workspaces": [
+    "apps/*"
+  ]
+}
